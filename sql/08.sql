@@ -12,6 +12,6 @@ WHERE title IN (
 SELECT title
 FROM film
 WHERE rating = 'G' AND 'Trailers' = ANY(special_features)
-ORDER BY title
+ORDER BY lower(title)
 )
 ;
